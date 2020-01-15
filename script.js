@@ -19,14 +19,14 @@ function createGrid(number)
 
     //Resize button
     resizeButton.addEventListener("click", function() {
-       
+       resize();
     });
     
 
     //Creates divs
     for(i=1; i<=area; i++){
         let newDivs = document.createElement('div');
-        newDivs.id = "newDivs";
+        newDivs.className = "newDivs";
         containerDiv.appendChild(newDivs);
         console.log("div created");
 
@@ -51,12 +51,11 @@ function createGrid(number)
         });
     }
 }
-function resize(number) {
-    for (i=0; i < number; i++)
-    {
-        let divToDelete = document.querySelector("#newDivs");
-        divToDelete.remove();
+function resize() {
+    var divsDelete = document.getElementsByClassName("newDivs");
+    while(divsDelete.length > 0){
+        divsDelete[0].parentNode.removeChild(divsDelete[0]);
     }
-    let resize = prompt("How big would you like your Etch-A-Sketch?");
-    createGrid(resize);
+    number = prompt("How big would you like your Etch-A-Sketch?");
+    createGrid(number);
 }
