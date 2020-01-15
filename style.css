@@ -1,0 +1,24 @@
+#newDivs {
+    border: lightgray solid 0.5px
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+}
+
+.button-wrapper {
+    width: 207px;
+    position: relative;
+    margin: 10px auto;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
